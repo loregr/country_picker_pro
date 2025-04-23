@@ -139,9 +139,7 @@ class _CountryListViewState extends State<CountryListView> {
 
   @override
   Widget build(BuildContext context) {
-    final String searchLabel =
-        CountryLocalizations.of(context)?.countryName(countryCode: 'search') ??
-            'Search';
+    final String searchLabel = '';
 
     final List<String> alphabet = List.generate(
         26, (index) => String.fromCharCode('A'.codeUnitAt(0) + index));
@@ -176,7 +174,8 @@ class _CountryListViewState extends State<CountryListView> {
                   onChanged: _filterSearchResults,
                   decoration: InputDecoration(
                     labelText: searchLabel,
-                    hintText: searchLabel,
+                    floatingLabelBehavior: FloatingLabelBehavior.never,
+                    hintText: 'Search',
                     prefixIcon: Icon(
                       widget.searchBarIcon ?? Icons.search,
                       color: widget.searchBarTextColor ?? Colors.black,
