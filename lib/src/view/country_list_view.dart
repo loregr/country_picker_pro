@@ -152,7 +152,7 @@ class _CountryListViewState extends State<CountryListView> {
             Theme(
               data: ThemeData(
                   colorScheme: ColorScheme(
-                background: Colors.white,
+                background: Colors.black,
                 brightness: Brightness.light,
                 primary: widget.searchBarHintColor ?? Colors.black,
                 onPrimary: Colors.white,
@@ -161,7 +161,7 @@ class _CountryListViewState extends State<CountryListView> {
                 error: Colors.white,
                 onError: Colors.white,
                 onBackground: Colors.white,
-                surface: Colors.white,
+                surface: Colors.black,
                 onSurface: widget.searchBarTextColor ?? Colors.white,
               )),
               child: Padding(
@@ -171,6 +171,7 @@ class _CountryListViewState extends State<CountryListView> {
                   autofocus: _searchBarAutofocus,
                   controller: _searchController,
                   keyboardType: TextInputType.multiline,
+                  keyboardAppearance: Brightness.dark,
                   onChanged: _filterSearchResults,
                   decoration: InputDecoration(
                     labelText: searchLabel,
