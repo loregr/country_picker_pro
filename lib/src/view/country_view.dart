@@ -71,7 +71,7 @@ void showCountryListView({
         isDismissible: true,
         enableDrag: true,
         clipBehavior: Clip.hardEdge,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(borderRadius ?? 0))),
         showDragHandle: false,
@@ -91,7 +91,7 @@ void showCountryListView({
                             // padding: const EdgeInsets.symmetric(vertical: 20),
                             margin: const EdgeInsets.symmetric(vertical: 20),
                             decoration: BoxDecoration(
-                                color: Colors.grey,
+                                color: Colors.black,
                                 borderRadius: BorderRadius.circular(8)),
                             height: 6,
                             width: 80,
@@ -141,7 +141,7 @@ void showCountryListView({
       fullscreenDialog: true,
       builder: (BuildContext context) {
         return Scaffold(
-          backgroundColor: backIconColour ?? Colors.transparent,
+          backgroundColor: Colors.black,
           appBar: AppBar(
             centerTitle: appBarTextCenterAlign ?? true,
             backgroundColor: appBarBackgroundColour ?? Colors.black,
